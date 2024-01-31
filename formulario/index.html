@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Web Transparente con Grid y Estilo Mejorado</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    nav {
+      justify-self: end;
+      margin-left: 30px; /* Ajuste para mover el nav 30px a la izquierda */
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    main {
+      padding: 20px;
+      margin-top: 80px; /* Espacio para el header */
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #333;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label, input, textarea {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    footer {
+      background: rgba(255, 255, 255, 0.7);
+      height: 200px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Media query para dispositivos móviles */
+    @media only screen and (max-width: 600px) {
+      header {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      nav {
+        justify-self: center;
+        margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+        margin-top: 10px; /* Espacio para el nav */
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+
+      main {
+        margin-top: 60px; /* Espacio para el header en dispositivos móviles */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Logo o Contenido Izquierdo</h1>
+    <nav>
+      <a href="#">Enlace 1</a>
+      <a href="#">Enlace 2</a>
+      <a href="#">Enlace 3</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Título Principal</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="mensaje">Tu Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    Contenido del Pie de Página
+  </footer>
+
+</body>
+</html>

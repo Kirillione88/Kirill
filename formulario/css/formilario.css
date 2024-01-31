@@ -1,0 +1,139 @@
+    @charset "utf-8";
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root{
+        height: 100%;
+        --color-primary: #617bff;
+        --color-secondary: #fff;
+        --color-terciary: #ff0a78;
+        --color-fortuary: #171527;
+        --color-fifthtuary: #41355f;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--color-fortuary);
+      color: var(--color-secondary);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden; /* Evitar scroll horizontal */
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      padding: 15px;
+      width: 100%;
+      z-index: 1000;
+      /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+      display: flex;
+      justify-content: flex-end;
+      top: 0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 40px;
+    }
+
+    p {
+      margin: 16px 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      margin-left: 20px;
+    }
+
+    main {
+      margin-top: 80px;
+      padding: 20px;
+      flex: 1;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label, input, textarea, button {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    footer {
+      background: rgba(255, 255, 255, 0);
+      height: 100px;
+      /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); */
+      width: 100%;
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between; /* Alineación izquierda-derecha */
+      align-items: center; /* Alineación verticalmente centrada */
+      padding: 0 20px; /* Añadido para espaciar los elementos del footer */
+    }
+
+    /* Media query para dispositivos móviles */
+    @media only screen and (max-width: 600px) {
+      nav {
+        justify-content: center;
+        text-align: center;
+        margin-right: 20px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+
+      main {
+        margin-top: 80px;
+      }
+    }
+
+    /* Agregamos un estilo para el checkbox */
+    form input[type="checkbox"] {
+      margin-bottom: 10px;
+    }
+
+    /* Estilo para el enlace en el footer */
+    footer a {
+      text-decoration: none;
+      color: #333; /* Color del enlace */
+    }
+
+    /* Agregamos estilo para las filas de checkboxes */
+    form label {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    form input[type="checkbox"] {
+      display: inline-block;
+      margin-right: 5px;
+    }
+ 
